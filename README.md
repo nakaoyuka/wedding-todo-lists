@@ -22,3 +22,23 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|bigday|string|null: false|
+### Association
+- has_many :tasks
+
+## tasksテーブル
+|Column|Type|Options|
+|------|----|-------|
+|date|date||
+|type|string||
+|text|text||
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
