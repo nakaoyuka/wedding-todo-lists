@@ -1,0 +1,43 @@
+.todo-main
+  .todo-main__form
+    .todo-main__form__tag-boxs
+      .todo-main__form__tag-boxs__dressbox
+        Dress -ドレス-
+      .todo-main__form__tag-boxs__paperbox
+        Paperitem -ペーパーアイテム-
+      .todo-main__form__tag-boxs__foodbox
+        Cuisine -料理-
+      .todo-main__form__tag-boxs__codebox
+        Coordination -コーディネート-
+      .todo-main__form__tag-boxs__giftbox
+        Gift -ギフト-
+
+    .todo-main__from__sort
+    %form
+      %input.date-box{:type => 'date'}
+      %select.tag-box{:name => 'tag'}
+        %option{:value => '0'} 選んでね！
+        %option{:value => '1'} ドレス
+        %option{:value => '2'} ペーパーアイテム
+        %option{:value => '3'} 料理
+        %option{:value => '4'} コーディネート
+        %option{:value => '5'} ギフト
+      %input.todo-box{:type => 'text',
+                      :placeholder =>' TODO内容を書いてね！',
+                      :size => '70',
+                      :maxlength => '30'}
+      %input.submit-btn{:type => 'submit',:value => 'SEND'}
+
+  .todo-main__contents
+    ー To Do List ー
+    .todo-main__content
+      .todo-main__contents__date-box
+        2020年2月20 までに
+      .todo-main__contents__tag-box
+        ペーパーアイテム
+      .todo-main__contents__content-box
+        招待状発送する
+      -# .todo-main__contents__done-btn
+      %input.done-btn{:type =>'button',:value => '完了'}
+      .todo-main__contents__edit-btn
+      %input.edit-btn{:type =>'button',:value => '編集'}

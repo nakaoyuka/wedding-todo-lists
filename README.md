@@ -37,7 +37,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |date|date||
-|type|string||
+|tag|string||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
