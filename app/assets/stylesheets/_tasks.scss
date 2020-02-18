@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+// ヘッダー
+.todo-head {
+  height: 160px;
+  width: 100%;
+  background-color: #FFC0CB;
+  position: relative;
+
+  .todo-head__top {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: whitesmoke;
+    padding-top: 7px;
+
+    .todo-head__top__little { 
+      font-size: 30px;
+      font-weight: bolder;
+      color: #FF4F50;
+    }
+
+    .todo-head__top__user {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 250px;
+      left: 15px;
+      padding: 10px;
+
+      .todo-head__top__user__user-name {
+        padding-right: 20px;
+        font-weight: bold;
+      }
+      .todo-head__top__user__btn {
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid 1px whitesmoke;
+      }
+    }
+  }
+
+  .todo-head__image {
+    width: 50%;
+    color: whitesmoke;
+    margin: auto;
+    margin-top: 15px;
+
+    .todo-head__image__icon {
+      font-size: 40px;
+      position: relative;
+
+      .contents__btn--chuchicon {
+        position: absolute;
+        left: 15px;
+      }
+      .contents__btn--grassicon {
+        position: absolute;
+        right: 18px;
+      }
+    }
+
+    .todo-head__image__top-icons {
+      font-size: 30px;
+      position: relative;
+      text-align: center;
+
+      .contents__btn--envelopeicon {
+        position: absolute;
+        left: 150px
+      }
+      .contents__btn--cakeicon {
+        position: absolute;
+      }
+      .contents__btn--gifticon {
+        position: absolute;
+        right: 160px;
+      }
+    }
+
+    .todo-head__image__arrow {
+      position: relative;
+      box-sizing: border-box;
+      width: 80%;
+      border-bottom: 2px solid whitesmoke;
+      line-height: 1em;
+      text-align: center;
+      margin: auto;
+      height: 40px;
+      line-height: 40px;
+    }
+
+      .todo-head__image__arrow::after{
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        border-right: 1.5em solid #FFC0CB;
+        border-bottom: 0.7em solid whitesmoke;
+        content: "";
+      }
+
+      .todo-head__image__buttom-icons {
+        font-size: 30px;
+        position: relative;
+        margin-top: 10px;
+
+        .contents__btn--hearticon {
+          position: absolute;
+          left: 250px
+        }
+
+        .contents__btn--utensilsicon {
+          position: absolute;
+          right: 250px;
+        }
+      }    
+  }
+  .todo-head__image__big-day {
+    position: absolute;
+    right: 200px;
+    bottom: 70px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #FF4F50;
+  }
+}
+
+// メイン部分
+.todo-main {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(#FFF0F5 30%, transparent 0),
+              radial-gradient(#FFF0F5 30%, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+
+  .todo-main__form {
+    height: 170px;
+    width: 80%;
+    margin: auto;
+    background-color: #FFF0F5;
+
+    .todo-main__form__tag-boxs{
+      display: flex;
+      margin: 10px 10px 40px 10px;
+      justify-content: space-between;
+      color: whitesmoke;
+
+      .todo-main__form__tag-boxs__dressbox,
+      .todo-main__form__tag-boxs__paperbox,
+      .todo-main__form__tag-boxs__foodbox,
+      .todo-main__form__tag-boxs__codebox,
+      .todo-main__form__tag-boxs__giftbox {
+        background-color: #FF9999;
+        height: 30px;
+        width: 210px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+
+      input,select {
+        height: 50px;
+        margin: 7px;
+        color: gray;
+      }
+
+      .submit-btn {
+        background-color: palevioletred;
+        color: whitesmoke;
+        border-style:none;
+        width: 80px;
+      }
+  }
+
+  .todo-main__contents {
+    height: calc(100vh - 120px - 170px);
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    // border-top: 1px burlywood solid;
+    text-align: center;
+    color: #FF9999;
+    font-size: 25px;
+    padding-top: 20px;
+    
+    .todo-main__content {
+      position: relative;
+      height: 30px;
+      font-size: 15px;
+      margin-top: 30px;
+    
+
+      .todo-main__contents__date-box {
+        position: absolute;
+        color: gray;
+        width: 180px;
+        border: 1px #A9A9A9	 solid;
+        margin-left: 7px;
+        padding-top: 4px;
+      }
+
+      .todo-main__contents__tag-box {
+        position: absolute;
+        color: whitesmoke;
+        background-color: #FF9999;
+        width: 170px;
+        text-align: center;
+        line-height: 30px;
+        margin-left: 200px;
+      }
+
+      .todo-main__contents__content-box {
+        position: absolute;
+        color: gray;
+        margin-left: 385px;
+        width: 600px;
+        border-bottom: 1px grey solid;
+        text-align: left;
+        padding-top: 3px;
+      }
+
+      input {
+        // position: absolute;
+        color: whitesmoke;
+        border-style:none;
+        background-color: palevioletred;
+        width: 60px;
+        height: 30px;
+      }
+
+      .done-btn {
+        position: absolute;
+        margin-left: 430px;
+      }
+
+      .edit-btn {
+        position: absolute;
+        margin-left: 500px;
+      }
+    }
+  }
+
+}
