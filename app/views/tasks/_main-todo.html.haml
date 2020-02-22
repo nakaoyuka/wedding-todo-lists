@@ -13,20 +13,11 @@
         Gift -ギフト-
 
     .todo-main__from__sort
-    %form
-      %input.date-box{:type => 'date'}
-      %select.tag-box{:name => 'tag'}
-        %option{:value => '0'} 選んでね！
-        %option{:value => '1'} ドレス
-        %option{:value => '2'} ペーパーアイテム
-        %option{:value => '3'} 料理
-        %option{:value => '4'} コーディネート
-        %option{:value => '5'} ギフト
-      %input.todo-box{:type => 'text',
-                      :placeholder =>' TODO内容を書いてね！',
-                      :size => '70',
-                      :maxlength => '30'}
-      %input.submit-btn{:type => 'submit',:value => 'SEND'}
+      = form_for [@task] do |f|
+        = f.date_field :date
+        = f.select :tag,['選択してね！','ドレス','ペーパーアイテム','料理','コーディネート','ギフト'],{}
+        = f.text_field:text, placeholder: "ここにTO DO内容を入力してね！", size:"70"
+        = f.submit 'TODOを追加', class:'submit-btn'
 
   .todo-main__contents
     ー To Do List ー
